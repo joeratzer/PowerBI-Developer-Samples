@@ -111,15 +111,15 @@ namespace EncryptCredentials.Services
 			// Get the Getway
 			Gateway gateway = new Gateway(gatewayId);
 			try
-            {
+			{
 				gateway = GetGateway(gatewayId);
-            }
+			}
 			catch (HttpOperationException e)
 			{
 				if (e.Response.ReasonPhrase != "Not Found")
-                {
+				{
 					throw;
-                }
+				}
 			}
 
 			// Initialize credentialsEncryptor and encryptedConnection for Cloud gateway
